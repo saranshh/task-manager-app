@@ -56,3 +56,15 @@
   - Start the frontend:
     ```bash
     npm run dev
+
+**Routes:**
+
+* 🔐 Authentication
+1. Register: POST `/api/auth/register`  
+2. Login: POST `/api/auth/login` 
+
+* 📋 Task Management (Requires JWT)
+1. Get All Tasks: GET `/api/tasks`  
+2. Create New Task: POST `/api/tasks`
+3. Update Task: PUT `/api/tasks/:id`
+4. Delete Task: DELETE `/api/tasks/:id`
