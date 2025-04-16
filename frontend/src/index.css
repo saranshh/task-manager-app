@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  input[type="text"],
+  input[type="password"],
+  textarea {
+    @apply border-gray-300 focus:border-blue-500 focus:ring-blue-500;
+  }
+}
