@@ -1,7 +1,7 @@
 import { Router } from "express";
 import { z } from "zod";
 import { PrismaClient } from "@prisma/client";
-import { auth, AuthRequest } from "../middleware/auth";
+import { auth, AuthRequest } from "../middleware/auth.js";
 
 const router = Router();
 const prisma = new PrismaClient();
@@ -12,7 +12,7 @@ const taskSchema = z.object({
   status: z.enum(["pending", "completed"]).default("pending"),
 });
 
-router.use(auth);
+router.use(auth); 
 
 router.get("/", async (req: AuthRequest, res) => {
   const tasks = await prisma.task.findMany({
